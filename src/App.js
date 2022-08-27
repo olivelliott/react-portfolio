@@ -1,24 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import "./App.css";
 import Nav from "./components/Nav";
 import About from "./components/About";
+import Portfolio from "./components/Portfolio";
 
 function App() {
-  // const [nav] = useState([
-  //   { name: 'About Me' },
-  //   { name: 'Portfolio' },
-  //   { name: 'Contact' },
-  //   { name: 'Resume' }
-  // ]);
+  const [categories] = useState([
+    { name: "About" },
+    { name: "Portfolio" },
+    { name: "Contact" },
+    { name: "Resume" },
+  ]);
 
-  // const [currentNav, setCurrentNav] = useState('');
+  const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
     <ChakraProvider>
       <div>
-        <Nav />
+        <Nav
+          categories={categories}
+          setCurrentCategory={setCurrentCategory}
+          currentCategory={currentCategory}
+        ></Nav>
         <main>
+          <Portfolio />
           <About />
         </main>
         <footer></footer>
@@ -34,8 +40,8 @@ export default App;
 //* THEN I am presented with a page containing a header, a section for content, and a footer
 //* WHEN I view the header
 //* THEN I am presented with the developer's name and navigation with titles corresponding to different sections of the portfolio
-// WHEN I view the navigation titles
-// THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted
+//* WHEN I view the navigation titles
+//* THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted
 // WHEN I click on a navigation title
 // THEN I am presented with the corresponding section below the navigation without the page reloading and that title is highlighted
 // WHEN I load the portfolio the first time
