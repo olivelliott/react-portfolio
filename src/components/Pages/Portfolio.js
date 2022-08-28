@@ -1,12 +1,15 @@
-import React from "react";
-import photo from "../../assets/ez-stream.png";
+import React, { useState } from "react";
+// import projects from '../../assets/projects/ez-stream.png'
+import photo from '../../assets/projects/ez-stream.png'
 
 function Portfolio() {
-  const projects = [
+  const projectArr = [
     {
       name: "Ez-Stream",
       description:
         "An application that shows the streaming services a tv show or movie is available on",
+      deployedApp: 'https://mlmcgeenc.github.io/group-2-project-one/',
+      github: 'https://github.com/olivelliott/ez-stream'
     },
     {
       name: "Tech|nicality",
@@ -35,29 +38,25 @@ function Portfolio() {
     },
   ];
 
-  function projectSelected() {
-    console.log("hi");
-  }
-
   return (
-    <section>
-      {projects.map((project) => (
-        <div className="flex-row">
-          <span onClick={projectSelected}>
-            <h1 className="mx-1" key={project.name}>
-              {project.name}
-            </h1>
-            <img
-              src={photo}
-              alt="Ez-Stream project example"
-              className="img-thumbnail mx-1"
-            />
-          </span>
-        </div>
-      ))}
-    </section>
-  );
-}
+    <ul className='project-list'>
+      {projectArr.map(({name, deployedApp, github}) => {
+        return (
+          <li className='project-item'>
+            <p>{name}</p>
+            <a
+              href={deployedApp}
+              target="_blank">Deployed App
+            </a>
+            <a
+              href={github}
+              target="_blank">GitHub</a>
+          </li>
+        )
+      })}
+    </ul>
+  )
+};
 
 export default Portfolio;
 

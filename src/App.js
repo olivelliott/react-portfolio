@@ -1,38 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import "./App.css";
-import Nav from "./components/Nav";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
+import PortfolioContainer from './components/PortfolioContainer'
 
-function App() {
-  const [categories] = useState([
-    { name: "About" },
-    { name: "Portfolio" },
-    { name: "Contact" },
-    { name: "Resume" },
-  ]);
-
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
-  return (
-    <ChakraProvider>
-      <div>
-        <Nav
-          categories={categories}
-          setCurrentCategory={setCurrentCategory}
-          currentCategory={currentCategory}
-        ></Nav>
-        <main>
-          <Portfolio />
-          <About />
-        </main>
-        <footer></footer>
-      </div>
-    </ChakraProvider>
-  );
-}
-
+const App = () => 
+  <ChakraProvider>
+    <PortfolioContainer />
+  </ChakraProvider>;
 export default App;
 
 //* GIVEN a single-page application portfolio for a web developer
