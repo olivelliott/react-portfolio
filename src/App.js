@@ -1,12 +1,31 @@
 import React from "react";
-import { ChakraProvider } from "@chakra-ui/react";
+import { extendTheme, ChakraProvider } from "@chakra-ui/react";
 import PortfolioContainer from './components/PortfolioContainer'
 
+const colors = {
+  brand: {
+    900: '#1a365d',
+    800: '#153e75',
+    700: '#2a69ac',
+  },
+}
+
+const theme = extendTheme({ colors })
+
 const App = () => 
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
     <PortfolioContainer />
   </ChakraProvider>;
 export default App;
+
+
+
+
+
+
+
+
+
 
 //* GIVEN a single-page application portfolio for a web developer
 //* WHEN I load the portfolio
