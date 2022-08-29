@@ -3,6 +3,7 @@ import React from "react";
 function Nav({ currentPage, handlePageChange }) {
   const determineActiveClass = (pageName) =>
     `nav-link ${currentPage === pageName ? "active" : ""}`;
+
   const pageNames = ["About", "Portfolio", "Contact"];
 
   return (

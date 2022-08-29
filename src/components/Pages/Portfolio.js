@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Badge, Image, SimpleGrid } from "@chakra-ui/react";
 // import projects from '../../assets/projects/ez-stream.png'
 
 function Portfolio() {
@@ -10,6 +10,8 @@ function Portfolio() {
         "An application that shows the streaming services a tv show or movie is available on",
       deployedApp: "https://mlmcgeenc.github.io/group-2-project-one/",
       GitHub: "https://github.com/olivelliott/ez-stream",
+      tech: "JS | API",
+      imagePath: '../../assets/projects/ez-stream.png'
     },
     {
       name: "Tech|nicality",
@@ -17,6 +19,8 @@ function Portfolio() {
         "Tech blog site where developers can publish their blog posts and comment on other developers posts.",
       deployedApp: "https://technicality.herokuapp.com/",
       GitHub: "https://github.com/olivelliott/tech-nicality",
+      imagePath: '../assets/projects/test.png'
+
     },
     {
       name: "Band Site",
@@ -49,21 +53,60 @@ function Portfolio() {
   ];
 
   return (
-    <div>
-      {projectArr.map(({ name, deployedApp, GitHub }) => {
+    <SimpleGrid minChildWidth='300px' spacing={10}>
+      {projectArr.map(({ name, deployedApp, GitHub, tech, imagePath }) => {
         return (
-          <Box m={5} color="#f00" className="project-item">
-            <p>{name}</p>
-            <a href={deployedApp} target="_blank">
-              Deployed App
-            </a>
-            <a href={GitHub} target="_blank">
-              GitHub
-            </a>
+          <Box alignItems='center' justifyContent='space-around'>
+          <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" textAlign='right'>
+            {/* ! FIX IMAGE */}
+            <Image src={imagePath} />
+            <Box p="6">
+              <Box display="flex" alignItems="baseline">
+                <Badge borderRadius="full" px="2" colorScheme="teal">
+                  {name}
+                </Badge>
+                <Box
+                  color="gray.500"
+                  fontWeight="semibold"
+                  letterSpacing="wide"
+                  fontSize="xs"
+                  textTransform="uppercase"
+                  ml="2"
+                >
+                  {tech}
+                </Box>
+              </Box>
+
+              {/* <Box
+                mt="1"
+                fontWeight="semibold"
+                as="h4"
+                lineHeight="tight"
+                noOfLines={1}
+              >
+                {name}
+              </Box>
+ */}
+              <Box
+                mt="1"
+                fontWeight="semibold"
+                as="h4"
+                lineHeight="tight"
+                noOfLines={1}
+              >
+                <a href={deployedApp} target="_blank">
+                  Site
+                </a>
+                <a href={GitHub} target="_blank">
+                  GitHub
+                </a>
+              </Box>
+            </Box>
+          </Box>
           </Box>
         );
       })}
-    </div>
+    </SimpleGrid>
   );
 }
 
