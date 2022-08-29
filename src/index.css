@@ -290,6 +290,6 @@ a {
 	
 }
 
-.navActive {
+.nav-link:active {
   color: var(--secondary);
 }

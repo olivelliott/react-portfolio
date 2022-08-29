@@ -1,6 +1,11 @@
 import React from "react";
-import { Box, Badge, Image, SimpleGrid } from "@chakra-ui/react";
-// import projects from '../../assets/projects/ez-stream.png'
+import { Box, Badge, Image, SimpleGrid, Center } from "@chakra-ui/react";
+import ez from '../../assets/projects/ez-stream.png';
+import budget from '../../assets/projects/budget-tracker.png';
+import insomnia from '../../assets/projects/insomnia.png';
+import social from '../../assets/projects/social-network.png';
+import weather from '../../assets/projects/weather-dashboard.png';
+import technicality from '../../assets/projects/technicality.png'
 
 function Portfolio() {
   const projectArr = [
@@ -11,7 +16,7 @@ function Portfolio() {
       deployedApp: "https://mlmcgeenc.github.io/group-2-project-one/",
       GitHub: "https://github.com/olivelliott/ez-stream",
       tech: "JS | API",
-      imagePath: '../../assets/projects/ez-stream.png'
+      imagePath: ez
     },
     {
       name: "Tech|nicality",
@@ -19,8 +24,7 @@ function Portfolio() {
         "Tech blog site where developers can publish their blog posts and comment on other developers posts.",
       deployedApp: "https://technicality.herokuapp.com/",
       GitHub: "https://github.com/olivelliott/tech-nicality",
-      imagePath: '../assets/projects/test.png'
-
+      imagePath: technicality
     },
     {
       name: "Band Site",
@@ -28,6 +32,7 @@ function Portfolio() {
         "A website that features a local band to allow fans to connect with one another and sign up for exclusive updates.",
       deployedApp: "https://band-site-22.herokuapp.com/",
       GitHub: "https://github.com/olivelliott/project-2-band-site",
+      imagePath: insomnia
     },
     {
       name: "Budget Tracker",
@@ -35,6 +40,7 @@ function Portfolio() {
         "A budget tracker application that has been updated to allow for offline access and functionality so that the user can track withdrawals and deposits with or without a data/internet connection.",
       deployedApp: "https://budget-tracker-19-app.herokuapp.com/",
       GitHub: "https://github.com/olivelliott/budget-tracker",
+      imagePath: budget
     },
     {
       name: "Social Network Api",
@@ -42,6 +48,7 @@ function Portfolio() {
         "An API for a social network web application where users can share their thoughts, react to friends thoughts, and create a friend list.",
       deployedApp: "https://github.com/olivelliott/social-network-api",
       GitHub: "https://github.com/olivelliott/social-network-api",
+      imagePath: social
     },
     {
       name: "Weather Dashboard",
@@ -49,6 +56,7 @@ function Portfolio() {
         "An application that looks up the current weather conditions based on the location entered.",
       deployedApp: "https://olivelliott.github.io/weather-dashboard/",
       GitHub: "https://github.com/olivelliott/weather-dashboard",
+      imagePath: weather
     },
   ];
 
@@ -56,10 +64,13 @@ function Portfolio() {
     <SimpleGrid minChildWidth='300px' spacing={10}>
       {projectArr.map(({ name, deployedApp, GitHub, tech, imagePath }) => {
         return (
-          <Box alignItems='center' justifyContent='space-around'>
+          <Center>
+          <Box key={name}>
           <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" textAlign='right'>
-            {/* ! FIX IMAGE */}
-            <Image src={imagePath} />
+            <Image 
+              src={imagePath}
+              objectFit='cover'
+            />
             <Box p="6">
               <Box display="flex" alignItems="baseline">
                 <Badge borderRadius="full" px="2" colorScheme="teal">
@@ -104,6 +115,7 @@ function Portfolio() {
             </Box>
           </Box>
           </Box>
+          </Center>
         );
       })}
     </SimpleGrid>

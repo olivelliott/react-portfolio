@@ -1,6 +1,7 @@
 import React from "react";
 
 function Nav({ currentPage, handlePageChange }) {
+
   const determineActiveClass = (pageName) =>
     `nav-link ${currentPage === pageName ? "active" : ""}`;
 
@@ -10,7 +11,7 @@ function Nav({ currentPage, handlePageChange }) {
     <ul className="nav nav-tabs">
       {pageNames.map((name) => {
         return (
-          <li className="nav-item">
+          <li className="nav-item" key={name}>
             <a
               href={`#${name}`}
               onClick={() => handlePageChange(name)}
