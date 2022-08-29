@@ -17,7 +17,7 @@ function Footer() {
                             <Image
                                 src={require(`../assets/icons/${name}.png`)}
                                 alt={alt}
-                                maxW='150px'
+                                maxW='100px'
                             ></Image>
                         </a>
                     )

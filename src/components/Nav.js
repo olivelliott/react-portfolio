@@ -1,4 +1,5 @@
 import React from "react";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 function Nav({ currentPage, handlePageChange }) {
 
@@ -8,10 +9,11 @@ function Nav({ currentPage, handlePageChange }) {
   const pageNames = ["About", "Portfolio", "Contact", 'Resume'];
 
   return (
-    <ul className="nav nav-tabs">
+    <Tabs align='end' variant='soft-rounded' colorScheme='green'>
+      <TabList>
       {pageNames.map((name) => {
         return (
-          <li className="nav-item" key={name}>
+          <Tab className="nav-item" key={name}>
             <a
               href={`#${name}`}
               onClick={() => handlePageChange(name)}
@@ -19,10 +21,13 @@ function Nav({ currentPage, handlePageChange }) {
             >
               {name}
             </a>
-          </li>
+          </Tab>
         );
       })}
-    </ul>
+      </TabList>
+    </Tabs>
+    // <ul className="nav nav-tabs">
+    // </ul>
   );
 }
 
