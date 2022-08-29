@@ -16,7 +16,7 @@ function About() {
                     borderRadius='full'
                 />
                 <Container>
-                    Hello! My name is Olivia Elliott and I am a novice Full Stack DeveloContainerer. I recently graduated
+                    Hello! My name is Olivia Elliott and I am a novice Full Stack Developer. I recently graduated
                     from the 24 week UNC Chapel Hill Full Stack Development program in September of 2022. In this intensive
                     class, I have learned many skills and aspire to continue my research and growth in my future career and
                     in side projects of my own. I have always had a desire to be able to find a career that will offer me the
