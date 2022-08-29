@@ -64,8 +64,8 @@ function Portfolio() {
     <SimpleGrid minChildWidth='300px' spacing={10}>
       {projectArr.map(({ name, deployedApp, GitHub, tech, imagePath }) => {
         return (
-          <Center>
-          <Box key={name}>
+          <Center key={name}>
+
           <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" textAlign='right'>
             <Image 
               src={imagePath}
@@ -113,7 +113,6 @@ function Portfolio() {
                 </a>
               </Box>
             </Box>
-          </Box>
           </Box>
           </Center>
         );

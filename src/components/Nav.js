@@ -5,7 +5,7 @@ function Nav({ currentPage, handlePageChange }) {
   const determineActiveClass = (pageName) =>
     `nav-link ${currentPage === pageName ? "active" : ""}`;
 
-  const pageNames = ["About", "Portfolio", "Contact"];
+  const pageNames = ["About", "Portfolio", "Contact", 'Resume'];
 
   return (
     <ul className="nav nav-tabs">
