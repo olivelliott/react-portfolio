@@ -11,7 +11,7 @@ export default function PortfolioContainer () {
 
     const Page = () => {
         switch(currentPage) {
-            case 'About' : return <About />
+            case 'About' : return <About  />
             case 'Portfolio' : return <Portfolio />
             case 'Resume' : return <Resume />
             default: return <Contact />

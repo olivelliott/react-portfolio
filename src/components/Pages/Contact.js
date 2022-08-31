@@ -8,6 +8,7 @@ import {
   Input,
   Textarea,
   Center,
+  Box
 } from "@chakra-ui/react";
 
 function Contact() {
@@ -46,7 +47,7 @@ function Contact() {
   }
 
   return (
-    <section>
+    <Box backgroundColor='navy' fontFamily='body'>
       <h1>Contact me</h1>
       <Center>
         <form onSubmit={handleFormSubmit}>
@@ -114,7 +115,7 @@ function Contact() {
                 )}
                 <button type='submit' data-testid='submit-btn'>Submit</button>
             </form> */}
-    </section>
+    </Box>
   );
 }
 

@@ -14,7 +14,7 @@ function Resume() {
     ]
 
     return (
-        <Box bg='lightblue' mt={10}>
+        <Box backgroundColor='navy' mt={10} fontFamily='body'>
             <Center pt={5}>My Skills</Center>
         <Flex flexWrap='wrap'>
             {logos.map(({ name, alt}) => {

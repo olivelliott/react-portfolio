@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Flex } from '@chakra-ui/react'
+import { Image, Flex, Box, Heading } from '@chakra-ui/react'
 
 
 function Footer() {
@@ -8,8 +8,8 @@ function Footer() {
         { name: 'linkedin', alt: 'linkedin icon', href:'https://www.linkedin.com/in/olivia-elliott-4a74a6128/'}
     ]
     return (
-        <footer>
-            <h1>Want to get connected? Check out my links!</h1>
+        <Box backgroundColor='navy' fontFamily='body' color='yellow'>
+            <Heading>Let's get connected!</Heading>
             <Flex>
                 {icons.map(({name, alt, href}) => {
                     return (
@@ -23,9 +23,9 @@ function Footer() {
                     )
                 })}
             </Flex>
-            <h2>Olivia Elliott</h2>
+            <Box>Olivia Elliott</Box>
             &copy; 2022
-        </footer>
+        </Box>
     )
 }
 

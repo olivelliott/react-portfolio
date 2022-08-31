@@ -9,7 +9,7 @@ function Nav({ currentPage, handlePageChange }) {
   const pageNames = ["About", "Portfolio", "Contact", 'Resume'];
 
   return (
-    <Tabs align='end' variant='soft-rounded' colorScheme='green'>
+    <Tabs align='end' variant='soft-rounded' colorScheme='orange' bg='navy' fontFamily='body'>
       <TabList>
       {pageNames.map((name) => {
         return (
