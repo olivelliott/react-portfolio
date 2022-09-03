@@ -60,7 +60,7 @@ const About = () => (
           minded individuals.&rdquo;
         </Text>
       </Flex>
-      <HStack
+      {/* <HStack
         justify="center"
         spacing="4"
         mt="8"
@@ -69,7 +69,7 @@ const About = () => (
         <Circle size="3" bg="blue.500" />
         <Circle size="2" bg="currentColor" />
         <Circle size="2" bg="currentColor" />
-      </HStack>
+      </HStack> */}
     </Box>
   </Box>
 );
