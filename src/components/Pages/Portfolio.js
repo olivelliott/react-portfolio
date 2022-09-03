@@ -3,8 +3,6 @@ import {
   Box,
   Badge,
   Image,
-  SimpleGrid,
-  Center,
   Flex,
   Link,
   chakra,
@@ -24,7 +22,7 @@ function Portfolio() {
         "An application that shows the streaming services a tv show or movie is available on",
       deployedApp: "https://mlmcgeenc.github.io/group-2-project-one/",
       GitHub: "https://github.com/olivelliott/ez-stream",
-      tech: "JS | API",
+      tech: "JS | Server Side API",
       imagePath: ez,
     },
     {
@@ -33,6 +31,7 @@ function Portfolio() {
         "Tech blog site where developers can publish their blog posts and comment on other developers posts.",
       deployedApp: "https://technicality.herokuapp.com/",
       GitHub: "https://github.com/olivelliott/tech-nicality",
+      tech: 'Node | MySql2 | Express',
       imagePath: technicality,
     },
     {
@@ -41,6 +40,7 @@ function Portfolio() {
         "A website that features a local band to allow fans to connect with one another and sign up for exclusive updates.",
       deployedApp: "https://band-site-22.herokuapp.com/",
       GitHub: "https://github.com/olivelliott/project-2-band-site",
+      tech: 'Node | Sequelize | GreenSock',
       imagePath: insomnia,
     },
     {
@@ -49,6 +49,7 @@ function Portfolio() {
         "A budget tracker application that has been updated to allow for offline access and functionality so that the user can track withdrawals and deposits with or without a data/internet connection.",
       deployedApp: "https://budget-tracker-19-app.herokuapp.com/",
       GitHub: "https://github.com/olivelliott/budget-tracker",
+      tech: 'PWA',
       imagePath: budget,
     },
     {
@@ -57,6 +58,7 @@ function Portfolio() {
         "An API for a social network web application where users can share their thoughts, react to friends thoughts, and create a friend list.",
       deployedApp: "https://github.com/olivelliott/social-network-api",
       GitHub: "https://github.com/olivelliott/social-network-api",
+      tech: 'Node | NoSQL | Jest',
       imagePath: social,
     },
     {
@@ -65,6 +67,7 @@ function Portfolio() {
         "An application that looks up the current weather conditions based on the location entered.",
       deployedApp: "https://olivelliott.github.io/weather-dashboard/",
       GitHub: "https://github.com/olivelliott/weather-dashboard",
+      tech: 'JQuery | Server Side API',
       imagePath: weather,
     },
   ];
@@ -258,32 +261,3 @@ function Portfolio() {
 }
 
 export default Portfolio;
-
-// import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
-
-// function Portfolio() {
-//     return (
-//         <Tabs>
-//             <TabList>
-//             <Tab>One</Tab>
-//             <Tab>Two</Tab>
-//             <Tab>Three</Tab>
-//         </TabList>
-
-//         <TabPanels>
-//             <TabPanel>
-//                 {/* <p>one!</p> */}
-//                 <About/>
-//             </TabPanel>
-//             <TabPanel>
-//                 <p>two!</p>
-//             </TabPanel>
-//             <TabPanel>
-//                 <p>three!</p>
-//             </TabPanel>
-//             </TabPanels>
-//         </Tabs>
-//     )
-// }
-
-// https://chakra-ui.com/docs/components/tabs/usage
