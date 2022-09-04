@@ -1,37 +1,44 @@
 import {
-  Box,
-  Button,
+  Container,
   Flex,
+  Box,
+  Heading,
+  Text,
+  IconButton,
+  Button,
+  VStack,
+  HStack,
+  Wrap,
+  WrapItem,
   FormControl,
   FormLabel,
-  Heading,
-  IconButton,
   Input,
   InputGroup,
   InputLeftElement,
-  Link,
-  Stack,
   Textarea,
+  Link,
+  useColorModeValue,
   Tooltip,
   useClipboard,
-  useColorModeValue,
-  VStack,
 } from "@chakra-ui/react";
+import {
+  MdEmail,
+  MdLocationOn,
+  MdOutlineEmail,
+} from "react-icons/md";
+import { BsGithub, BsPerson, BsLinkedin, BsTwitter } from "react-icons/bs";
 import React, { useState } from "react";
 import { validateEmail, capitalizeFirstLetter } from "../../utils/helpers";
 
-import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from "react-icons/bs";
-import { MdEmail, MdOutlineEmail } from "react-icons/md";
-
 const confetti = {
   light: {
-    primary: "4299E1", // blue.400
-    secondary: "BEE3F8", // blue.100
+    primary: "orange", 
+    secondary: "yellow", 
   },
 
   dark: {
-    primary: "1A365D", // blue.900
-    secondary: "2A4365", // blue.800
+    primary: "orange", 
+    secondary: "yellow", 
   },
 };
 
@@ -78,179 +85,186 @@ export default function ContactFormWithSocialButtons() {
   const { hasCopied, onCopy } = useClipboard("olivelliott48@gmail.com");
 
   return (
-    <Flex
+    <Container
       bg="navy"
-      align="center"
-      justify="center"
+      maxW="full"
+      mt={0}
+      centerContent
+      overflow="hidden"
       css={{
         backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
         backgroundAttachment: "fixed",
       }}
-      id="contact"
     >
-      <Box
-        borderRadius="lg"
-        m={{ base: 5, md: 16, lg: 10 }}
-        p={{ base: 5, lg: 16 }}
-      >
-        <Box>
-          <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
-            <Heading
-              color="orange"
-              fontSize={{
-                base: "4xl",
-                md: "5xl",
-              }}
-            >
-              Get In Touch!
-            </Heading>
-
-            <Stack
-              spacing={{ base: 4, md: 8, lg: 20 }}
-              direction={{ base: "column", md: "row" }}
-            >
-              <Stack
-                align="center"
-                justify="space-around"
-                direction={{ base: "row", md: "column" }}
-              >
-                <Tooltip
-                  label={hasCopied ? "Email Copied!" : "Copy Email"}
-                  closeOnClick={false}
-                  hasArrow
-                >
-                  <IconButton
-                    aria-label="email"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<MdEmail />}
-                    _hover={{
-                      bg: "orange",
-                      color: useColorModeValue("white", "gray.700"),
-                    }}
-                    onClick={onCopy}
-                    isRound
-                  />
-                </Tooltip>
-
-                <Link href="https://github.com/olivelliott" target="_blank">
-                  <IconButton
-                    aria-label="github"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<BsGithub />}
-                    _hover={{
-                      bg: "orange",
-                      color: useColorModeValue("white", "gray.700"),
-                    }}
-                    isRound
-                  />
-                </Link>
-
-                <Link href="https://twitter.com/oliv_e_lliott" target="_blank">
-                  <IconButton
-                    aria-label="twitter"
-                    variant="ghost"
-                    size="lg"
-                    icon={<BsTwitter size="28px" />}
-                    _hover={{
-                      bg: "orange",
-                      color: useColorModeValue("white", "gray.700"),
-                    }}
-                    isRound
-                  />
-                </Link>
-
-                <Link
-                  href="https://www.linkedin.com/in/olivia-elliott-4a74a6128/"
-                  target="_blank"
-                >
-                  <IconButton
-                    aria-label="linkedin"
-                    variant="ghost"
-                    size="lg"
-                    icon={<BsLinkedin size="28px" />}
-                    _hover={{
-                      bg: "orange",
-                      color: useColorModeValue("white", "gray.700"),
-                    }}
-                    isRound
-                  />
-                </Link>
-              </Stack>
-
-              <Box
-                bg={useColorModeValue("white", "gray.700")}
-                borderRadius="lg"
-                p={8}
-                color={useColorModeValue("gray.700", "whiteAlpha.900")}
-                shadow="base"
-              >
-                <VStack spacing={5}>
-                  <FormControl isRequired>
-                    <FormLabel>Name</FormLabel>
-
-                    <InputGroup>
-                      <InputLeftElement children={<BsPerson />} />
-                      <Input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        onBlur={handleFormChange}
-                      />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Email</FormLabel>
-
-                    <InputGroup>
-                      <InputLeftElement children={<MdOutlineEmail />} />
-                      <Input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        onBlur={handleFormChange}
-                      />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Message</FormLabel>
-
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      rows={6}
-                      resize="none"
-                      onBlur={handleFormChange}
-                    />
-                  </FormControl>
-
-                  {errorMessage && (
-                    <div>
-                      <p className="error-text">{errorMessage}</p>
-                    </div>
-                  )}
-
-                  <Button
-                    bg="orange"
-                    color="white"
-                    _hover={{
-                      bg: "navy",
-                    }}
-                    onClick={handleFormSubmit}
+      <Flex>
+        <Box
+          bg="gray.800"
+          color="white"
+          borderRadius="lg"
+          m={{ sm: 4, md: 16, lg: 10 }}
+          p={{ sm: 5, md: 5, lg: 16 }}
+        >
+          <Box p={4}>
+            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+              <WrapItem>
+                <Box>
+                  <Heading>Contact</Heading>
+                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
+                    Get in touch!
+                  </Text>
+                  <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
+                    <VStack pl={0} spacing={3} alignItems="flex-start">
+                      <Tooltip
+                        label={hasCopied ? "Email Copied!" : "Copy Email"}
+                        closeOnClick={false}
+                        hasArrow
+                      >
+                        <Button
+                          size="md"
+                          height="48px"
+                          width="200px"
+                          variant="ghost"
+                          color="#DCE2FF"
+                          onClick={onCopy}
+                          _hover={{
+                            border: "2px solid",
+                            borderColor: "orange",
+                          }}
+                          leftIcon={<MdEmail color="white" size="20px" />}
+                        >
+                          olivelliott48@gmail
+                        </Button>
+                      </Tooltip>
+                      <Button
+                        size="md"
+                        height="48px"
+                        width="200px"
+                        variant="ghost"
+                        color="#DCE2FF"
+                        _hover={{ border: "2px solid", borderColor: "orange" }}
+                        leftIcon={<MdLocationOn color="white" size="20px" />}
+                      >
+                        Vilas, NC
+                      </Button>
+                    </VStack>
+                  </Box>
+                  <HStack
+                    mt={{ lg: 10, md: 10 }}
+                    spacing={5}
+                    px={5}
+                    alignItems="center"
                   >
-                    Send Message
-                  </Button>
-                </VStack>
-              </Box>
-            </Stack>
-          </VStack>
+                    <Link
+                      href="https://www.linkedin.com/in/olivia-elliott-4a74a6128/"
+                      target="_blank"
+                    >
+                      <IconButton
+                        aria-label="linkedin"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
+                        _hover={{ bg: "orange" }}
+                        icon={<BsLinkedin size="28px" />}
+                      />
+                    </Link>
+                    <Link href="https://github.com/olivelliott" target="_blank">
+                      <IconButton
+                        aria-label="github"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
+                        _hover={{ bg: "orange" }}
+                        icon={<BsGithub size="28px" />}
+                      />
+                    </Link>
+                    <Link
+                      href="https://twitter.com/oliv_e_lliott"
+                      target="_blank"
+                    >
+                      <IconButton
+                        aria-label="twitter"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
+                        _hover={{ bg: "orange" }}
+                        icon={<BsTwitter size="28px" />}
+                      />
+                    </Link>
+                  </HStack>
+                </Box>
+              </WrapItem>
+              <WrapItem>
+                <Box bg="gray.100" borderRadius="lg">
+                  <Box m={8} color="#0B0E3F">
+                    <VStack spacing={5}>
+                      <FormControl id="name" isRequired>
+                        <FormLabel>Your Name</FormLabel>
+                        <InputGroup borderColor="#E0E1E7">
+                          <InputLeftElement
+                            pointerEvents="none"
+                            children={<BsPerson color="gray.800" />}
+                          />
+                          <Input
+                            type="text"
+                            size="md"
+                            name="name"
+                            onBlur={handleFormChange}
+                          />
+                        </InputGroup>
+                      </FormControl>
+
+                      <FormControl id="name" isRequired>
+                        <FormLabel>Email</FormLabel>
+                        <InputGroup borderColor="#E0E1E7">
+                          <InputLeftElement
+                            pointerEvents="none"
+                            children={<MdOutlineEmail color="gray.800" />}
+                          />
+                          <Input
+                            type="text"
+                            name="email"
+                            size="md"
+                            onBlur={handleFormChange}
+                          />
+                        </InputGroup>
+                      </FormControl>
+                      <FormControl id="name" isRequired>
+                        <FormLabel>Message</FormLabel>
+                        <Textarea
+                          borderColor="gray.300"
+                          _hover={{
+                            borderRadius: "gray.300",
+                          }}
+                          placeholder="message"
+                          name="message"
+                          onBlur={handleFormChange}
+                        />
+                      </FormControl>
+                      {errorMessage && (
+                        <div>
+                          <p className="error-text">{errorMessage}</p>
+                        </div>
+                      )}
+
+                      <FormControl id="name" float="right">
+                        <Button
+                          variant="solid"
+                          bg="orange"
+                          color="white"
+                          _hover={{}}
+                          onClick={handleFormSubmit}
+                        >
+                          Send Message
+                        </Button>
+                      </FormControl>
+                    </VStack>
+                  </Box>
+                </Box>
+              </WrapItem>
+            </Wrap>
+          </Box>
         </Box>
-      </Box>
-    </Flex>
+      </Flex>
+    </Container>
   );
 }
