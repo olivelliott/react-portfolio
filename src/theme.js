@@ -14,18 +14,4 @@ const theme = extendTheme({
     }
 })
 
-
-// const colors = {
-//     brand: {
-//         navy: '#264653',
-//         orange: '#f4a261'
-//     }
-// };
-
-// const font = {
-//     mono: 'Menlo, monospace'
-// }
-
-// const theme = extendTheme({ colors, font })
-
 export default theme;
