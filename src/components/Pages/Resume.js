@@ -65,7 +65,7 @@ function Resume() {
               <Link
                 as="a"
                 target="_blank"
-                href="../../assets/Olivia_Elliott_Resume.pdf"
+                href="../../assets/Olivia-Elliott-Resume.pdf"
                 download
                 bg="orange"
                 color="gray.100"
