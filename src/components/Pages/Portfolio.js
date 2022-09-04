@@ -31,7 +31,7 @@ function Portfolio() {
         "Tech blog site where developers can publish their blog posts and comment on other developers posts.",
       deployedApp: "https://technicality.herokuapp.com/",
       GitHub: "https://github.com/olivelliott/tech-nicality",
-      tech: 'Node | MySql2 | Express',
+      tech: "Node | MySql2 | Express",
       imagePath: technicality,
     },
     {
@@ -40,7 +40,7 @@ function Portfolio() {
         "A website that features a local band to allow fans to connect with one another and sign up for exclusive updates.",
       deployedApp: "https://band-site-22.herokuapp.com/",
       GitHub: "https://github.com/olivelliott/project-2-band-site",
-      tech: 'Node | Sequelize | GreenSock',
+      tech: "Node | Sequelize | GreenSock",
       imagePath: insomnia,
     },
     {
@@ -49,7 +49,7 @@ function Portfolio() {
         "A budget tracker application that has been updated to allow for offline access and functionality so that the user can track withdrawals and deposits with or without a data/internet connection.",
       deployedApp: "https://budget-tracker-19-app.herokuapp.com/",
       GitHub: "https://github.com/olivelliott/budget-tracker",
-      tech: 'PWA',
+      tech: "PWA",
       imagePath: budget,
     },
     {
@@ -58,7 +58,7 @@ function Portfolio() {
         "An API for a social network web application where users can share their thoughts, react to friends thoughts, and create a friend list.",
       deployedApp: "https://github.com/olivelliott/social-network-api",
       GitHub: "https://github.com/olivelliott/social-network-api",
-      tech: 'Node | NoSQL | Jest',
+      tech: "Node | NoSQL | Jest",
       imagePath: social,
     },
     {
@@ -67,69 +67,12 @@ function Portfolio() {
         "An application that looks up the current weather conditions based on the location entered.",
       deployedApp: "https://olivelliott.github.io/weather-dashboard/",
       GitHub: "https://github.com/olivelliott/weather-dashboard",
-      tech: 'JQuery | Server Side API',
+      tech: "JQuery | Server Side API",
       imagePath: weather,
     },
   ];
 
   return (
-    //     <SimpleGrid minChildWidth='300px' spacing={10} backgroundColor='navy' fontFamily='body'>
-    //       {projectArr.map(({ name, deployedApp, GitHub, tech, imagePath }) => {
-    //         return (
-    //           <Center key={name}>
-
-    //           <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" textAlign='right' bg='white'>
-    //             <Image
-    //               src={imagePath}
-    //               objectFit='cover'
-    //             />
-    //             <Box p="6">
-    //               <Box display="flex" alignItems="baseline">
-    //                 <Badge borderRadius="full" px="2" backgroundColor='orange'>
-    //                   {name}
-    //                 </Badge>
-    //                 <Box
-    //                   color="gray.500"
-    //                   fontWeight="semibold"
-    //                   letterSpacing="wide"
-    //                   fontSize="xs"
-    //                   textTransform="uppercase"
-    //                   ml="2"
-    //                 >
-    //                   {tech}
-    //                 </Box>
-    //               </Box>
-
-    //               {/* <Box
-    //                 mt="1"
-    //                 fontWeight="semibold"
-    //                 as="h4"
-    //                 lineHeight="tight"
-    //                 noOfLines={1}
-    //               >
-    //                 {name}
-    //               </Box>
-    //  */}
-    //               <Box
-    //                 mt="1"
-    //                 fontWeight="semibold"
-    //                 as="h4"
-    //                 lineHeight="tight"
-    //                 noOfLines={1}
-    //               >
-    //                 <a href={deployedApp} target="_blank">
-    //                   Site
-    //                 </a>
-    //                 <a href={GitHub} target="_blank">
-    //                   GitHub
-    //                 </a>
-    //               </Box>
-    //             </Box>
-    //           </Box>
-    //           </Center>
-    //         );
-    //       })}
-    //     </SimpleGrid>
     <Flex
       bg="navy"
       _dark={{
@@ -226,7 +169,9 @@ function Portfolio() {
                     fontWeight="semibold"
                     rounded="lg"
                     _hover={{
-                      bg: "gray.800",
+                      bg: "white",
+                      color: "orange",
+                      textDecoration: "none",
                     }}
                   >
                     GitHub
@@ -245,7 +190,9 @@ function Portfolio() {
                     fontWeight="semibold"
                     rounded="lg"
                     _hover={{
-                      bg: "gray.800",
+                      bg: "white",
+                      color: "orange",
+                      textDecoration: "none",
                     }}
                   >
                     Deployed App
