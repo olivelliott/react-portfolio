@@ -34,7 +34,7 @@ const NavLink = ({ children }) => (
   </Link>
 );
 
-export default function Simple({ currentPage, handlePageChange }) {
+export default function Navigation({ currentPage, handlePageChange }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
     const determineActiveClass = (pageName) =>

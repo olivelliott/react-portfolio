@@ -8,6 +8,7 @@ import {
   useColorModeValue,
   Heading,
   Center,
+  Avatar
 } from "@chakra-ui/react";
 import HeadShot from "../../assets/headshot.jpg";
 import React from "react";
@@ -28,7 +29,7 @@ const About = () => (
           </Heading>
         </Center>
 
-        <Image
+        <Avatar
           src={HeadShot}
           mx="auto"
           objectFit="cover"
@@ -60,16 +61,6 @@ const About = () => (
           minded individuals.&rdquo;
         </Text>
       </Flex>
-      {/* <HStack
-        justify="center"
-        spacing="4"
-        mt="8"
-        color={useColorModeValue("gray.300", "gray.600")}
-      >
-        <Circle size="3" bg="blue.500" />
-        <Circle size="2" bg="currentColor" />
-        <Circle size="2" bg="currentColor" />
-      </HStack> */}
     </Box>
   </Box>
 );
