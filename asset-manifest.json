@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.f0e883d3.css",
+    "main.js": "/react-portfolio/static/js/main.75249eee.js",
+    "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/weather-dashboard.png": "/react-portfolio/static/media/weather-dashboard.338fd508734e6ccff3da.png",
+    "static/media/headshot.jpg": "/react-portfolio/static/media/headshot.8997bcfaef109ad19577.jpg",
+    "static/media/social-network.png": "/react-portfolio/static/media/social-network.b55511ee74d0a4ba9ac2.png",
+    "static/media/ez-stream.png": "/react-portfolio/static/media/ez-stream.388e808088ffe77398f6.png",
+    "static/media/insomnia.png": "/react-portfolio/static/media/insomnia.aeb85a1b39bc1b5b5de5.png",
+    "static/media/budget-tracker.png": "/react-portfolio/static/media/budget-tracker.533b4eca7bd838a33d2c.png",
+    "static/media/olive.png": "/react-portfolio/static/media/olive.c09636ff520f70353008.png",
+    "static/media/OE-1.png": "/react-portfolio/static/media/OE-1.2078b0675cd1359f4a55.png",
+    "static/media/technicality.png": "/react-portfolio/static/media/technicality.2fc3d010415502c65807.png",
+    "static/media/montserrat-all-300-normal.woff": "/react-portfolio/static/media/montserrat-all-300-normal.cb25782d576cc4b35601.woff",
+    "static/media/react.png": "/react-portfolio/static/media/react.a3ca4b8912124811860c.png",
+    "static/media/mysql.png": "/react-portfolio/static/media/mysql.172b840433ca9cb1f050.png",
+    "static/media/github.png": "/react-portfolio/static/media/github.37d13bad88535795837e.png",
+    "static/media/node.png": "/react-portfolio/static/media/node.c6f1b184ea063d6e78b4.png",
+    "static/media/mongodb.png": "/react-portfolio/static/media/mongodb.60b922015f99f690652a.png",
+    "static/media/html.png": "/react-portfolio/static/media/html.62d8bf17eae22d955c37.png",
+    "static/media/titillium-web-all-900-normal.woff": "/react-portfolio/static/media/titillium-web-all-900-normal.94f0bc900757b03888a1.woff",
+    "static/media/css.png": "/react-portfolio/static/media/css.fa17ccf7f108f4a68b40.png",
+    "static/media/js.png": "/react-portfolio/static/media/js.954f7019c92d792b4181.png",
+    "static/media/linkedin.png": "/react-portfolio/static/media/linkedin.1f6e5d89ddfb5b69d100.png",
+    "static/media/montserrat-latin-300-normal.woff2": "/react-portfolio/static/media/montserrat-latin-300-normal.0cc3e06704117dcfc367.woff2",
+    "static/media/titillium-web-latin-900-normal.woff2": "/react-portfolio/static/media/titillium-web-latin-900-normal.7c03cd1bc0832fd74fa4.woff2",
+    "static/media/montserrat-latin-ext-300-normal.woff2": "/react-portfolio/static/media/montserrat-latin-ext-300-normal.7f5dee6c782fd4ff0e9c.woff2",
+    "static/media/montserrat-cyrillic-ext-300-normal.woff2": "/react-portfolio/static/media/montserrat-cyrillic-ext-300-normal.6091a5d41e290c8af528.woff2",
+    "static/media/montserrat-cyrillic-300-normal.woff2": "/react-portfolio/static/media/montserrat-cyrillic-300-normal.8a381d078cd679f5a017.woff2",
+    "static/media/titillium-web-latin-ext-900-normal.woff2": "/react-portfolio/static/media/titillium-web-latin-ext-900-normal.370ade3a085c7dc7671b.woff2",
+    "static/media/montserrat-vietnamese-300-normal.woff2": "/react-portfolio/static/media/montserrat-vietnamese-300-normal.260b5062c37e2f23cb52.woff2",
+    "index.html": "/react-portfolio/index.html",
+    "main.f0e883d3.css.map": "/react-portfolio/static/css/main.f0e883d3.css.map",
+    "main.75249eee.js.map": "/react-portfolio/static/js/main.75249eee.js.map",
+    "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0e883d3.css",
+    "static/js/main.75249eee.js"
+  ]
+}
