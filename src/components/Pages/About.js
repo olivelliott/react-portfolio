@@ -1,20 +1,15 @@
-import {
-  Box,
-  Circle,
-  Flex,
-  HStack,
-  Text,
-  Image,
-  useColorModeValue,
-  Heading,
-  Center,
-  Avatar
-} from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Center, Avatar } from "@chakra-ui/react";
 import HeadShot from "../../assets/headshot.jpg";
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const About = () => (
   <Box as="section" bg="navy">
+    <Helmet>
+      <title>About Me</title>
+      <image src="../../assets/icons/OE-1.png" />
+    </Helmet>
+
     <Box maxW="3xl" mx="auto" px={{ base: "6", md: "8" }} pt="12" pb="16">
       <Flex direction="column" align="center" textAlign="center">
         <Center>

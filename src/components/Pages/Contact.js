@@ -21,24 +21,21 @@ import {
   Tooltip,
   useClipboard,
 } from "@chakra-ui/react";
-import {
-  MdEmail,
-  MdLocationOn,
-  MdOutlineEmail,
-} from "react-icons/md";
+import { MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsPerson, BsLinkedin, BsTwitter } from "react-icons/bs";
 import React, { useState } from "react";
 import { validateEmail, capitalizeFirstLetter } from "../../utils/helpers";
+import { Helmet } from "react-helmet";
 
 const confetti = {
   light: {
-    primary: "orange", 
-    secondary: "yellow", 
+    primary: "orange",
+    secondary: "yellow",
   },
 
   dark: {
-    primary: "orange", 
-    secondary: "yellow", 
+    primary: "orange",
+    secondary: "yellow",
   },
 };
 
@@ -96,6 +93,9 @@ export default function ContactFormWithSocialButtons() {
         backgroundAttachment: "fixed",
       }}
     >
+      <Helmet>
+        <title>Contact</title>
+      </Helmet>
       <Flex>
         <Box
           bg="gray.800"

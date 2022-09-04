@@ -1,18 +1,12 @@
 import React from "react";
-import {
-  Box,
-  Badge,
-  Image,
-  Flex,
-  Link,
-  chakra,
-} from "@chakra-ui/react";
+import { Box, Badge, Image, Flex, Link, chakra } from "@chakra-ui/react";
 import ez from "../../assets/projects/ez-stream.png";
 import budget from "../../assets/projects/budget-tracker.png";
 import insomnia from "../../assets/projects/insomnia.png";
 import social from "../../assets/projects/social-network.png";
 import weather from "../../assets/projects/weather-dashboard.png";
 import technicality from "../../assets/projects/technicality.png";
+import { Helmet } from "react-helmet";
 
 function Portfolio() {
   const projectArr = [
@@ -84,6 +78,10 @@ function Portfolio() {
       justifyContent="center"
       flexWrap="wrap"
     >
+      <Helmet>
+        <title>Portfolio</title>
+      </Helmet>
+
       {projectArr.map(
         ({ name, deployedApp, description, GitHub, tech, imagePath }) => {
           return (
@@ -111,7 +109,7 @@ function Portfolio() {
             >
               <Box w={{ lg: "50%" }}>
                 <Image
-                  h={{ base: 64, lg: "full" }}
+                  h={{ base: 64, lg: "full", md: "full", sm: "full" }}
                   rounded={{
                     lg: "lg",
                   }}
@@ -144,7 +142,12 @@ function Portfolio() {
                 >
                   {name}
                 </chakra.h2>
-                <Badge borderRadius="full" px="2" backgroundColor="orange">
+                <Badge
+                  borderRadius="full"
+                  px="2"
+                  backgroundColor="orange"
+                  color="gray.800"
+                >
                   {tech}
                 </Badge>
                 <chakra.p

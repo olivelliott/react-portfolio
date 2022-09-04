@@ -1,15 +1,14 @@
-// import React from 'react';
-// import { Image, Flex, Box, Heading, Center } from '@chakra-ui/react'
 import {
   ButtonGroup,
   Container,
   IconButton,
   Stack,
   Text,
-  Box,
+
   Image,
 } from "@chakra-ui/react";
 import * as React from "react";
+import brand from "../assets/icons/OE-1.png";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 function Footer() {
@@ -38,7 +37,7 @@ function Footer() {
     >
       <Stack spacing={{ base: "4", md: "5" }}>
         <Stack justify="space-between" direction="row" align="center">
-          <Box>Brand Here</Box>
+          <Image src={brand} maxW="4.5rem"></Image>
           <ButtonGroup variant="ghost" color="orange">
             <IconButton
               as="a"
@@ -64,30 +63,9 @@ function Footer() {
               aria-label="Twitter"
               icon={<FaTwitter fontSize="1.25rem" />}
             />
-
-            {/* {icons.map(({name, alt, href, icon}) => {
-                return (
-                    // <a href={href} target='_blank' rel='noopener noreferrer'>
-                    //     <Image
-                    //         src={require(`../assets/icons/${name}.png`)}
-                    //         alt={alt}
-                    //         maxW='50px'
-                    //     ></Image>
-                    // </a>
-                    <IconButton
-                      as="a"
-                      href={href}
-                      target="_blank" rel="noopener noreferrer"
-                      aria-label="LinkedIn"
-                      icon={<FaLinkedin fontSize="1.25rem" />}
-                    />
-      
-                )
-            })}
- */}
           </ButtonGroup>
         </Stack>
-        <Text fontSize="sm" color="subtle">
+        <Text fontSize="sm" color="white" align="center">
           &copy; {new Date().getFullYear()} Olivia Elliott
         </Text>
       </Stack>

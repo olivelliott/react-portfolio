@@ -20,20 +20,17 @@ AS AN employer looking for candidates with experience building single-page appli
 I WANT to view a potential employee's deployed React portfolio of work samples
 SO THAT I can assess whether they're a good candidate for an open position
 ```
-## Installation
-
-Please fork this repository over to your local system. Then follow these steps below to initialize the npm modules and necessary seeds for the database.
-
-1. Open your command line and ensure that you are in the root of this repository. Then type in the following prompts in this order:
-
-- `npm init`
-- `npm install`
-
 ## Media
+![](./src/assets/readme/about.png)
 
+![](./src/assets/readme/portfolio.png)
+
+![](./src/assets/readme/contact.png)
+
+![](./src/assets/readme/resume.png)
 
 ## Deployed Application
-
+[Deployed Site Link](https://olivelliott.github.io/react-portfolio/)
 
 ## License
 This application is licensed under the MIT license. Please click on the link below to learn more.
