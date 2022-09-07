@@ -61,12 +61,10 @@ function Resume() {
               >
                 Resume
               </Heading>
-
               <Link
-                as="a"
-                target="_blank"
-                href="../../assets/OElliott-Resume.pdf"
-                download
+              as='a'
+                href="https://docs.google.com/document/d/10WSUNgzm6tAKv1VXxTmOi1B8UYn99l5XzhJPwMEivyg/edit?usp=sharing"
+              target='_blank'
                 bg="orange"
                 color="gray.100"
                 px={5}
