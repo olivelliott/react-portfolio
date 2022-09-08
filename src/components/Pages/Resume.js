@@ -63,8 +63,8 @@ function Resume() {
               </Heading>
               <Link
               as='a'
-                href="https://docs.google.com/document/d/10WSUNgzm6tAKv1VXxTmOi1B8UYn99l5XzhJPwMEivyg/edit?usp=sharing"
-              target='_blank'
+                href="/resume/O_Elliott_Resume.pdf"
+                download
                 bg="orange"
                 color="gray.100"
                 px={5}
