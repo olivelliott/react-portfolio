@@ -6,10 +6,19 @@ import insomnia from "../../assets/projects/insomnia.png";
 import social from "../../assets/projects/social-network.png";
 import weather from "../../assets/projects/weather-dashboard.png";
 import technicality from "../../assets/projects/technicality.png";
+import hmu from '../../assets/projects/hmu.png';
 import { Helmet } from "react-helmet";
 
 function Portfolio() {
   const projectArr = [
+    {
+      name: 'Hand-Me-Up',
+      description: 'A clothing re-sale application with a purpose that reduces the stigma of accepting low-cost clothing. Sellers list their clothing for sale at a rate that just covers shipping. Buyers can shop from a selection of low-cost but trendy and modern clothing. Buyers have the option to make an additional donation to a partner charity of their choice when making a purchase.',
+      deployedApp: "https://polar-chamber-11415.herokuapp.com/",
+      GitHub: "https://github.com/olivelliott/hand-me-up",
+      tech: "React | MongoDB | Apollo | ChakraUI",
+      imagePath: hmu
+    },
     {
       name: "Ez-Stream",
       description:
