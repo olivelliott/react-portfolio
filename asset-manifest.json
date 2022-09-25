@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.f0e883d3.css",
-    "main.js": "/react-portfolio/static/js/main.6222e9f8.js",
+    "main.js": "/react-portfolio/static/js/main.148a0a5c.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/weather-dashboard.png": "/react-portfolio/static/media/weather-dashboard.338fd508734e6ccff3da.png",
     "static/media/headshot.jpg": "/react-portfolio/static/media/headshot.8997bcfaef109ad19577.jpg",
@@ -13,6 +13,7 @@
     "static/media/olive.png": "/react-portfolio/static/media/olive.c09636ff520f70353008.png",
     "static/media/OE-1.png": "/react-portfolio/static/media/OE-1.2078b0675cd1359f4a55.png",
     "static/media/technicality.png": "/react-portfolio/static/media/technicality.2fc3d010415502c65807.png",
+    "static/media/O_Elliott_Resume.pdf": "/react-portfolio/static/media/O_Elliott_Resume.19c185e1e65d26b2888d.pdf",
     "static/media/montserrat-all-300-normal.woff": "/react-portfolio/static/media/montserrat-all-300-normal.cb25782d576cc4b35601.woff",
     "static/media/react.png": "/react-portfolio/static/media/react.a3ca4b8912124811860c.png",
     "static/media/mysql.png": "/react-portfolio/static/media/mysql.172b840433ca9cb1f050.png",
@@ -33,11 +34,11 @@
     "static/media/montserrat-vietnamese-300-normal.woff2": "/react-portfolio/static/media/montserrat-vietnamese-300-normal.260b5062c37e2f23cb52.woff2",
     "index.html": "/react-portfolio/index.html",
     "main.f0e883d3.css.map": "/react-portfolio/static/css/main.f0e883d3.css.map",
-    "main.6222e9f8.js.map": "/react-portfolio/static/js/main.6222e9f8.js.map",
+    "main.148a0a5c.js.map": "/react-portfolio/static/js/main.148a0a5c.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f0e883d3.css",
-    "static/js/main.6222e9f8.js"
+    "static/js/main.148a0a5c.js"
   ]
 }
