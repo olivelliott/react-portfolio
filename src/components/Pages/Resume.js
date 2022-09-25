@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Image, Center, Flex, Box, Heading, Link } from "@chakra-ui/react";
+import pdf from '../../assets/O_Elliott_Resume.pdf';
 
 function Resume() {
   const logos = [
@@ -63,7 +64,7 @@ function Resume() {
               </Heading>
               <Link
               as='a'
-                href="/resume/O_Elliott_Resume.pdf"
+                href={pdf}
                 download
                 bg="orange"
                 color="gray.100"
